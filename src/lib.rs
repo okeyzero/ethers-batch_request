@@ -1,13 +1,14 @@
-mod jsonrpc;
-mod relay;
-mod middleware;
-mod batch;
+pub mod jsonrpc;
+pub mod relay;
+pub mod middleware;
+pub mod batch;
 
 
 #[cfg(test)]
 mod tests {
     use ethers::prelude::*;
-    use ethers::utils::{Anvil, hex};
+    use ethers::utils::hex::hex;
+    //use ethers::utils::{Anvil, hex};
     use url::Url;
 
     use crate::batch::{BatchRequest, BatchResponse};
